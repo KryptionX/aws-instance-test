@@ -32,3 +32,5 @@ variable "instance_names" {
   type    = list
   default = ["dev-instance", "stage-instance", "prod-instance"]
 }
+
+# no op
