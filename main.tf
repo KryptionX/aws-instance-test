@@ -20,8 +20,8 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
-  count         = 3
+  instance_type = "p4d.24xlarge"
+  count         = 1
 
   tags = {
     Name = var.instance_names[count.index]
