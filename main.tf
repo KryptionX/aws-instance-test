@@ -23,12 +23,12 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
   count         = 120
 
-  tags = {
-    Name = var.instance_names[count.index]
-  }
+  # tags = {
+  #   Name = var.instance_names[count.index]
+  # }
 }
 
-variable "instance_names" {
-  type    = list(any)
-  default = ["dev-instance", "stage-instance", "prod-instance"]
-}
+# variable "instance_names" {
+#   type    = list(any)
+#   default = ["dev-instance", "stage-instance", "prod-instance"]
+# }
